@@ -1,0 +1,98 @@
+#cardAbert {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: black;
+    height: 65vh;
+    padding: 100px 0;
+    color: white;
+}
+
+.intro-text-open {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.intro-text-open h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-text-open p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.container-open {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2cm;
+    padding-bottom: 150px;
+}
+
+.card-open {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+.card-inner-open {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.card-open:hover .card-inner-open {
+    transform: rotateY(180deg) scale(1.30);
+}
+
+
+.card-front-open,
+.card-back-open {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-front-open {
+    background-color: #1f1f1f;
+    backface-visibility: hidden;
+    text-decoration: underline;
+}
+
+.card-front-open img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 50px;
+    height: auto;
+}
+
+.card-front-open p {
+    margin-top: 70px;
+}
+
+.card-back-open {
+    background-color: #1f1f1f;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}

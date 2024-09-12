@@ -1,0 +1,352 @@
+/* barra de scroll */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: silver;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
+}
+
+/* paleta de cores */
+:root {
+    --wa-color: rgb(37, 211, 102);
+    --bg-dark-transparent: rgba(0, 0, 0, .6);
+    --contap-logo: rgb(205, 155, 50);
+    --white-color: whitesmoke;
+    --black-color: black;
+}
+
+/* corpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* whatsapp botão fixo */
+.wa-icon {
+    background-color: var(--wa-color);
+    color: var(--white-color);
+
+    font-size: 32px;
+    padding: 3px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+
+    transition: .3s;
+}
+
+.wa-icon:hover {
+    transform: translateY(-10px);
+}
+
+/* cabeçalho */
+.hero {
+    background-image: url(./images/pinheiros.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.hero-bgcolor {
+    background-color: var(--bg-dark-transparent);
+}
+
+.hero header {
+    height: 90px;
+    background-color: var(--bg-dark-transparent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero header img {
+    height: 100%;
+}
+
+.hero-menu {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    height: 100%;
+}
+
+.hero-menu a {
+    color: var(--white-color);
+    text-decoration: none;
+    height: 100%;
+    margin-right: 30px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+
+.hero-menu a:hover {
+    background-color: var(--bg-dark-transparent);
+    border-bottom: 1px solid var(--white-color);
+}
+
+.hero section {
+    margin: -20px auto 0;
+    padding: 50px 0;
+    width: 900px;
+    color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero section a {
+    text-decoration: none;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+}
+
+.hero-text p {
+    font-size: 32px;
+}
+
+/* botão whatsapp */
+.wa-btn {
+    background-color: var(--contap-logo);
+    color: var(--white-color);
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: .3s;
+    font-size: 16px;
+}
+
+.wa-btn i {
+    font-size: 24px;
+}
+
+.wa-btn:hover {
+    padding: 20px 30px;
+}
+
+/* seta com animação */
+.arrow {
+    margin-top: 10px;
+    font-size: 48px;
+    color: var(--white-color);
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+/* faixa que separa conteúdo */
+.strip-container {
+    background-color: var(--black-color);
+    padding: 20px 0;
+}
+
+.strip {
+    width: 900px;
+    margin: 0 auto;
+}
+
+.strip a {
+    text-decoration: none;
+}
+
+.strip-text {
+    margin: 0 auto;
+    color: var(--white-color);
+    font-size: 24px;
+    text-align: center;
+}
+
+.strip-elements {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+
+.strip img {
+    height: 100%;
+}
+
+/* sobre nós */
+.about-us-content {
+    width: 900px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.about-us-img {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.about-us-img img {
+    width: 75%;
+    border-radius: 50%;
+}
+
+.about-us-text {
+    width: 50%;
+    font-size: 20px;
+}
+
+.about-us-text h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.about-us-text ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.about-us-text i {
+    color: var(--contap-logo);
+    margin-right: 10px;
+}
+
+/* entre em contato */
+.get-in-touch-content {
+    width: 900px;
+    margin: 0 auto;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.get-in-touch-img {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.get-in-touch-img img {
+    width: 75%;
+}
+
+.get-in-touch-text {
+    width: 50%;
+    font-size: 20px;
+}
+
+.get-in-touch-text h3 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.get-in-touch-text a {
+    text-decoration: none;
+}
+
+.get-in-touch-text i {
+    color: var(--white-color);
+}
+
+/* rodapé */
+.rodape {
+    background-color: var(--black-color);
+    color: var(--white-color);
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.footer-logo {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo img {
+    width: 100%;
+}
+
+.footer-content {
+    width: 400px;
+}
+
+.linha {
+    width: 50px;
+    height: 2px;
+    background-color: var(--contap-logo);
+}
+
+.redes-sociais {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.redes-sociais a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+.rede-social {
+    border: 2px solid var(--contap-logo);
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.contato i {
+    font-size: 12px;
+    margin-right: 5px;
+    color: var(--contap-logo);
+}

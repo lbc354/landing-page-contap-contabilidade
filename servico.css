@@ -1,0 +1,126 @@
+#cardServ {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    background-color: rgb(255, 255, 255);
+    height: 60vh;
+    padding: 100px 0;
+    color: black;
+}
+
+
+.intro-text {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.intro-text h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.intro-text p {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.container {
+    display: flex;
+    gap: 3cm;
+    padding-bottom: 70px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg) scale(1.30);
+    /* Rotaciona 180 graus no eixo Y e expande o card */
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.card-front {
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    backface-visibility: hidden;
+    text-decoration: underline;
+}
+
+.card-front img {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 50px;
+    height: auto;
+}
+
+.card-front p {
+    margin-top: 70px;
+}
+
+.card-back {
+    background-color: black;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.card-1 .card-front {
+    background-image: url(./imagesCard/pexels-karolina-grabowska-4476375.jpg);
+    opacity: 0.8;
+
+
+}
+
+.card-2 .card-front {
+    background-image: url(./imagesCard/pexels-olia-danilevich-5466814.jpg);
+    opacity: 0.8;
+
+}
+
+.card-3 .card-front {
+    background-image: url(./imagesCard/pexels-pixabay-209224.jpg);
+    opacity: 0.8;
+
+}
+
+.card-4 .card-front {
+    background-image: url(./imagesCard/pexels-pixabay-53621.jpg);
+    opacity: 0.8;
+
+}

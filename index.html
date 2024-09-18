@@ -21,6 +21,9 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <link href="servico.css" rel="stylesheet" type="text/css" />
     <link href="abertura.css" rel="stylesheet" type="text/css" />
+
+    <!-- js -->
+    <script src="./script.js" defer></script>
 </head>
 
 <body>
@@ -51,21 +54,21 @@
                     <p>Na Contap Contabilidade, você simplifica suas finanças e maximiza seus resultados com o apoio de
                         nossa equipe especializada</p>
                 </div>
-                <!-- <div class="arrow">
+                <div class="arrow">
                     <i class="fa-solid fa-arrow-down"></i>
-                </div> -->
+                </div>
                 <a href="https://wa.me/556299575913/?text=ola" target="_blank">
                     <div class="wa-btn">
                         <span>FALE CONOSCO</span>
                         <i class="fa-brands fa-whatsapp"></i>
                     </div>
                 </a>
-                <div class="arrow">
+                <!-- <div class="arrow">
                     <i class="fa-solid fa-arrow-down"></i>
-                </div>
+                </div> -->
             </section>
 
-            <footer class="strip-container">
+            <footer class="strip-container invisible">
                 <div class="strip">
                     <div class="strip-text">
                         <p>Transforme suas finanças com a Contap Contabilidade! Descubra nossos serviços e como
@@ -95,9 +98,10 @@
                 <div class="card card-1">
                     <div class="card-inner">
                         <div class="card-front">
-                            Consultoria
-                            Tributária e Fiscal
-                            <img src="./images/icon_consultoria tributara.png" alt="Icone 1" srcset="">
+                            <div class="bg-shadow">
+                                Consultoria Tributária e Fiscal
+                                <img src="./images/icon_consultoria tributara.png" alt="Icone 1" srcset="">
+                            </div>
                         </div>
                         <div class="card-back">
                             Oferecemos uma análise estratégica para reduzir sua carga tributária legalmente. Nossos
@@ -109,9 +113,11 @@
 
                 <div class="card card-2">
                     <div class="card-inner">
-                        <div class="card-front">Gestão de Folha de
-                            Pagamento
-                            <img src="./images/icon_gestaopagamento.png" alt="Icone 2" srcset="">
+                        <div class="card-front">
+                            <div class="bg-shadow">
+                                Gestão de Folha de Pagamento
+                                <img src="./images/icon_gestaopagamento.png" alt="Icone 2" srcset="">
+                            </div>
                         </div>
                         <div class="card-back"> Cuidamos de todo o processo de pagamento dos funcionários, garantindo
                             que esteja sempre em conformidade com a legislação trabalhista.
@@ -121,9 +127,11 @@
 
                 <div class="card card-3">
                     <div class="card-inner">
-                        <div class="card-front">Declaração de impostos
-                            empresariais
-                            <img src="./images/icon_declaracaoimposto.png" alt="Icone 3" srcset="">
+                        <div class="card-front">
+                            <div class="bg-shadow">
+                                Declaração de impostos empresariais
+                                <img src="./images/icon_declaracaoimposto.png" alt="Icone 3" srcset="">
+                            </div>
                         </div>
                         <div class="card-back">Preparamos e enviamos as declarações fiscais da sua empresa, otimizando
                             seus tributos e evitando problemas com o fisco.</div>
@@ -132,9 +140,11 @@
 
                 <div class="card card-4">
                     <div class="card-inner">
-                        <div class="card-front">Escrituração
-                            Contábil Completa
-                            <img src="./images/icon_escrituracaocontabil.png" alt="Icone 4" srcset="">
+                        <div class="card-front">
+                            <div class="bg-shadow">
+                                Escrituração Contábil Completa
+                                <img src="./images/icon_escrituracaocontabil.png" alt="Icone 4" srcset="">
+                            </div>
                         </div>
                         <div class="card-back">Registramos todas as movimentações financeiras da sua empresa, garantindo
                             transparência e precisão nos relatórios contábeis.</div>
@@ -146,7 +156,7 @@
 
 
         <!-- faixa -->
-        <div class="strip-container">
+        <div class="strip-container invisible">
             <div class="strip">
                 <div class="strip-text">
                     <p>Experimente o suporte que faz a diferença com a Contap Contabilidade. Conquiste seus
@@ -175,7 +185,7 @@
                     <img src="./images/contador.jpg" alt="foto de contador">
                 </div>
                 <div class="about-us-text">
-                    <h3>Sobre Nós</h3>
+                    <h2>Sobre Nós</h2>
                     <p>Na Contap Contabilidade, somos especialistas em contabilidade e consultoria fiscal, reconhecidos
                         como referência no Estado de Goiás. Nossa missão é simplificar a gestão financeira de empresas e
                         indivíduos, oferecendo soluções personalizadas que garantem precisão e eficiência.</p>
@@ -266,7 +276,7 @@
     </main>
 
     <!-- rodapé -->
-    <footer class="rodape">
+    <footer class="rodape invisible">
         <div class="footer-logo">
             <img src="./images/contap-logo.png" alt="logo da contap contabilidade">
         </div>
@@ -317,7 +327,7 @@
                 </div>
                 <div class="contato">
                     <i class="fa-solid fa-envelope"></i>
-                    <span>jh.advogados@hotmail.com</span>
+                    <span>contap@email.com</span>
                 </div>
             </div>
         </div>

@@ -4,8 +4,8 @@
     align-items: center;
     margin: 0 auto;
     background-color: black;
-    /* height: 65vh; */
-    padding: 100px 0;
+    min-height: 100vh;
+    padding: 50px 0;
     color: white;
 }
 
@@ -24,13 +24,13 @@
     margin: 0;
 }
 
-
 .container-open {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 2cm;
-    padding-bottom: 150px;
+    gap: 2rem;
+    /* Aumenta o gap para evitar sobreposição */
+    padding-bottom: 50px;
 }
 
 .card-open {
@@ -38,7 +38,8 @@
     height: 300px;
     perspective: 1000px;
     margin-bottom: 20px;
-    margin-top: 50px;
+    margin-top: 20px;
+    overflow: visible;
 }
 
 .card-inner-open {
@@ -49,10 +50,18 @@
     transform-style: preserve-3d;
 }
 
-.card-open:hover .card-inner-open {
-    transform: rotateY(180deg) scale(1.30);
+.card-open:hover .card-inner-open,
+.card-open.is-flipped .card-inner-open {
+    transform: rotateY(180deg) scale(1.15);
+
+    z-index: 10;
+
 }
 
+.card-open.is-flipped .card-inner-open {
+    /* Mantém a escala ao clicar */
+    transform: rotateY(180deg) scale(1.15);
+}
 
 .card-front-open,
 .card-back-open {
@@ -79,16 +88,12 @@
 }
 
 .card-front-open img {
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     max-width: 50px;
     height: auto;
 }
 
 .card-front-open p {
-    margin-top: 70px;
+    margin-top: 50px;
 }
 
 .card-back-open {

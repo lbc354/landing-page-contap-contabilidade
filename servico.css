@@ -4,11 +4,9 @@
     align-items: center;
     margin: 0;
     background-color: rgb(237, 237, 237);
-    /* height: 60vh; */
     padding: 100px 0;
     color: black;
 }
-
 
 .intro-text {
     text-align: center;
@@ -24,7 +22,6 @@
     font-size: 1.5rem;
     margin: 0;
 }
-
 
 .container {
     display: flex;
@@ -49,9 +46,16 @@
     transform-style: preserve-3d;
 }
 
-.card:hover .card-inner {
+/* Substituir esta parte */
+.card:hover .card-inner,
+.card.is-flipped .card-inner {
     transform: rotateY(180deg) scale(1.30);
     /* Rotaciona 180 graus no eixo Y e expande o card */
+}
+
+.card.is-flipped .card-inner {
+    /* Mantém a escala ao clicar */
+    transform: rotateY(180deg) scale(1.15);
 }
 
 .card-back {
@@ -87,7 +91,6 @@
     color: white;
     backface-visibility: hidden;
     text-decoration: underline;
-    /* filter: brightness(50%); */
     position: absolute;
     width: 100%;
     height: 100%;
@@ -130,5 +133,6 @@
 }
 
 .card-4 .card-front {
-    background-image: url(./imagesCard/pexels-polina-tankilevitch-6927336.jpg);
+    background-image: url(./imagesCard/moedas.jpeg);
+    /* background-color: rgba(0, 0, 0, .5); */
 }

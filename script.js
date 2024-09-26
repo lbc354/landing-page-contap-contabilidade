@@ -1,32 +1,9 @@
-// para elementos "aparecerem" na tela
-document.addEventListener('DOMContentLoaded', function () {
-    const elements = document.querySelectorAll('.invisible');
-
-    function checkVisibility() {
-        elements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
-            if (rect.top <= windowHeight && rect.bottom >= 0) {
-                element.classList.add('visible');
-            } else {
-                element.classList.remove('visible');
-            }
-        });
-    }
-
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility();
-});
-
-
-
-// slideshow
+// slideshow cabeçalho
 document.addEventListener("DOMContentLoaded", function () {
     // Array de URLs de imagens
     const images = [
         './images/pinheiros.jpg',
-        './images/contap-logo.png',
+        './images/pinheiros.jpg',
     ];
 
     // Seleciona o elemento que receberá o slideshow
@@ -52,6 +29,64 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Inicializa com a primeira imagem
     changeBackgroundImage();
+});
+
+
+
+// slideshow sobre nós
+document.addEventListener("DOMContentLoaded", function () {
+    // Array de URLs de imagens
+    const images = [
+        './images/sobre-nos-1.jpg',
+        './images/sobre-nos-2.jpg',
+    ];
+
+    // Seleciona o elemento que receberá o slideshow
+    const hero = document.querySelector('.about-us-img');
+
+    // Índice inicial da imagem
+    let currentImageIndex = 0;
+
+    // Tempo de exibição por imagem em milissegundos (5 segundos)
+    const slideshowInterval = 5000;
+
+    // Função para mudar o background
+    function changeBackgroundImage() {
+        // Muda a imagem de fundo do elemento .hero
+        hero.style.backgroundImage = `url(${images[currentImageIndex]})`;
+
+        // Atualiza o índice da próxima imagem
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+    }
+
+    // Inicializa o slideshow
+    setInterval(changeBackgroundImage, slideshowInterval);
+
+    // Inicializa com a primeira imagem
+    changeBackgroundImage();
+});
+
+
+
+// para elementos "aparecerem" na tela
+document.addEventListener('DOMContentLoaded', function () {
+    const elements = document.querySelectorAll('.invisible');
+
+    function checkVisibility() {
+        elements.forEach(element => {
+            const rect = element.getBoundingClientRect();
+            const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+
+            if (rect.top <= windowHeight && rect.bottom >= 0) {
+                element.classList.add('visible');
+            } else {
+                element.classList.remove('visible');
+            }
+        });
+    }
+
+    window.addEventListener('scroll', checkVisibility);
+    checkVisibility();
 });
 
 

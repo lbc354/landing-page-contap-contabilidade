@@ -1,103 +1,130 @@
-#cardAbert {
+/* abertura empresa*/
+.container-enterprise {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    background-color: black;
-    min-height: 100vh;
-    padding: 50px 0;
-    color: white;
+    height: auto;
+    min-height: 660px;
+    background-color: white;
 }
 
-.intro-text-open {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.intro-text-open h2 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.intro-text-open p {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.container-open {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-    /* Aumenta o gap para evitar sobreposição */
-    padding-bottom: 50px;
-}
-
-.card-open {
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    overflow: visible;
-}
-
-.card-inner-open {
-    width: 100%;
-    height: 100%;
+.left-half-open {
+    width: 40%;
+    background-image: url(./images/imgPredio.png);
+    background-size: cover;
+    background-position: 28% center;
     position: relative;
-    transition: transform 0.6s ease, box-shadow 0.6s ease;
-    transform-style: preserve-3d;
+    background-repeat: no-repeat;
 }
 
-.card-open:hover .card-inner-open,
-.card-open.is-flipped .card-inner-open {
-    transform: rotateY(180deg) scale(1.15);
-
-    z-index: 10;
-
-}
-
-.card-open.is-flipped .card-inner-open {
-    /* Mantém a escala ao clicar */
-    transform: rotateY(180deg) scale(1.15);
-}
-
-.card-front-open,
-.card-back-open {
+.text-overlay-open {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
+    height: 40%;
+    font-size: 25px;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.right-half-open {
+    width: 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 1.2rem;
-    color: white;
-    border-radius: 10px;
-    box-sizing: border-box;
-    padding: 10px;
+    padding: 20px;
+    background-color: #fff;
+    height: auto;
+    font-family: "Poppins", sans-serif;
+}
+
+h2 {
     text-align: center;
-    overflow: hidden;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
 }
 
-.card-front-open {
-    background-color: #1f1f1f;
-    backface-visibility: hidden;
-    text-decoration: underline;
-}
-
-.card-front-open img {
-    max-width: 50px;
+.card-grid-open {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    width: 100%;
     height: auto;
 }
 
-.card-front-open p {
-    margin-top: 50px;
+.card-open {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
 }
 
-.card-back-open {
-    background-color: #1f1f1f;
-    transform: rotateY(180deg);
-    backface-visibility: hidden;
+.card-open img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.card-content-open {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.card-header-open {
+    display: flex;
+    align-items: center;
+}
+
+.card-open h3 {
+    font-size: 22px;
+    color: #333;
+    margin: 0;
+}
+
+.card-open p {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+}
+
+.card-open:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header-open {
+    display: flex;
+    align-items: center;
+}
+
+.card-header-open img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.whatsapp-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    position: absolute;
+    bottom: -180px;
+    left: 50%;
+    transform: translateX(-50%);
 }

@@ -368,7 +368,6 @@ strong {
 /* responsividade */
 @media(max-width: 600px) {
     .get-in-touch-content {
-        /* flex-direction: column-reverse; */
         flex-direction: column;
     }
 
@@ -377,7 +376,7 @@ strong {
     }
 
     .get-in-touch-img img {
-        margin-bottom: -5rem;
+        display: none;
     }
 
     .get-in-touch-text {

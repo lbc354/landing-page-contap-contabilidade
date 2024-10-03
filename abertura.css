@@ -1,5 +1,5 @@
 /* abertura empresa*/
-.container-enterprise {
+.container {
     display: flex;
     height: auto;
     min-height: 660px;
@@ -20,7 +20,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 40%;
     font-size: 25px;
     color: black;
     display: flex;
@@ -102,19 +101,7 @@ h2 {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.card-header-open {
-    display: flex;
-    align-items: center;
-}
-
-.card-header-open img {
-    width: 30px;
-    height: 30px;
-    margin-right: 10px;
-}
-
-.whatsapp-button {
-    display: block;
+.whatsapp-button-open {
     margin: 20px auto;
     padding: 10px 20px;
     background-color: #25D366;
@@ -124,7 +111,69 @@ h2 {
     text-decoration: none;
     font-weight: bold;
     position: absolute;
-    bottom: -180px;
+    bottom: -70px;
     left: 50%;
     transform: translateX(-50%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+    }
+
+    .left-half-open {
+        width: 100%;
+        height: 300px;
+        background-position: center;
+    }
+
+    .right-half-open {
+        width: 100%;
+    }
+
+    .card-grid-open {
+        grid-template-columns: 1fr;
+    }
+
+    .whatsapp-button {
+        bottom: -120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .left-half-open {
+        height: 200px;
+    }
+
+    .text-overlay-open {
+        font-size: 18px;
+        padding: 10px;
+    }
+
+    .right-half-open {
+        padding: 10px;
+    }
+
+    .card-open {
+        padding: 15px;
+    }
+
+    .card-open h3 {
+        font-size: 18px;
+    }
+
+    .card-open p {
+        font-size: 14px;
+    }
+
+    .whatsapp-button {
+        bottom: -100px;
+    }
 }

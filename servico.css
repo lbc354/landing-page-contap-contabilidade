@@ -4,6 +4,7 @@
     height: auto;
     min-height: 660px;
     flex-wrap: wrap;
+    padding-top: 8rem;
 }
 
 .left-half-services {
@@ -43,7 +44,7 @@
     justify-content: center;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
+    /* background-color: #fff; */
     height: auto;
     font-family: "Poppins", sans-serif;
 }
@@ -64,9 +65,9 @@ h2 {
 }
 
 .card-services {
-    background-color: #e0e0e0;
+    background-color: #ededed;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     padding: 20px;
 }
@@ -104,7 +105,7 @@ h2 {
 
 .card-services:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
 }
 
 .card-header-services {

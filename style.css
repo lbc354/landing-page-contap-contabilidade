@@ -19,6 +19,7 @@
 :root {
     --wa-color: rgb(37, 211, 102);
     --bg-dark-transparent: rgba(0, 0, 0, .6);
+    --bg-light-silver: #ededed;
     --contap-logo: rgb(205, 155, 50);
     --black-color: black;
     --white-color: whitesmoke;
@@ -261,11 +262,15 @@ body {
 }
 
 /* sobre nós */
+.about-us-container {
+    background-color: var(--bg-light-silver);
+}
+
 .about-us-content {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    padding-top: 6rem;
+    padding: 5rem 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -323,11 +328,15 @@ strong {
 }
 
 /* entre em contato */
+.get-in-touch-container {
+    background-color: var(--bg-light-silver);
+}
+
 .get-in-touch-content {
     width: 90%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 6rem 0 8rem;
+    padding: 5rem 0;
     display: flex;
     justify-content: center;
     gap: .8rem;
